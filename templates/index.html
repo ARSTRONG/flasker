@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Im {{ firstName|trim }}</h1>
+    <p>{{ stuff|safe }}</p>
+
+    <br>
+    <h3>Menu Pizzas:</h3>
+
+    {% for i in favorite_pizza %}
+        {% if i == 41 %}
+            {{i+10}}
+        {% else %}
+            {{i}}<br/>
+        {% endif %}
+    {% endfor %}
+
+    <br><br>
+
+    {{favorite_pizza.0|reverse}}
+
+</body>
+</html>
